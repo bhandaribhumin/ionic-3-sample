@@ -1,0 +1,40 @@
+
+<ion-header>
+
+	<ion-navbar>
+			<ion-buttons left>
+					<button color="white-color" ion-button menuToggle icon-only>
+					  <ion-icon class="menu-font-style" name="ios-menu-outline"></ion-icon>
+					</button>
+				  </ion-buttons>
+		<ion-title class="pageTitle">Contact Us</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="contact-content-color">
+	<ion-list>
+
+		<div class="contact-us-main-div">
+			<h1>{{pageHeading}}</h1>
+			<h4>{{pageContent}}</h4>
+			<div>
+				<button ion-button icon-left>
+					<ion-icon name="ios-mail"></ion-icon>
+					<a href="mailto:{{email}}">{{email}}</a>
+				</button>
+			</div>
+			<div>
+				<button ion-button icon-left>
+					<ion-icon name="md-call"></ion-icon>
+					<a href="tel:{{contact_number}}">{{contact_number}}</a>
+				</button>
+			</div>
+		</div>
+	</ion-list>
+</ion-content>
+<ion-footer class="hide-on-keyboard-open" align="center" no-border>
+
+	<div class="footer-style">
+		<a class="footer-link-style" (click)="navigate('FaqPage')">FAQs</a>
+	</div>
+
+</ion-footer>

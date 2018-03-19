@@ -1,0 +1,46 @@
+<ion-header id="homepageHeader">
+
+  <ion-navbar>
+    <ion-buttons>
+      <button color="white-color" ion-button menuToggle icon-only>
+        <ion-icon class="menu-font-style" name="ios-menu-outline"></ion-icon>
+        <ion-badge item-end="" class="badge-style">{{DisplaybadgeCount}}</ion-badge>
+      </button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-buttons  end (tap)="navigate('SearchPage')">
+      <button ion-button color="white-color" class="search-icon-style" icon-only>
+        <ion-icon name="ios-search-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  no-padding class="card-background-page" no-bounce>
+
+  <ion-card   (click)="navigate('MyMeetingsPage')">
+    <img  [style.height.px]="cardHeight" src="assets/img/background/my-meetings.png"/>
+  </ion-card>
+  <ion-card   (click)="navigate('AdvanceMeetingBookingPage')">
+    <img [style.height.px]="cardHeight" src="assets/img/background/book-a-meeting-room.png"/>
+  </ion-card>
+  <ion-card  (click)="navigate('QrScannerInstantbookPage')">
+    <img [style.height.px]="cardHeight" src="assets/img/background/instant-booking.png"/>
+  </ion-card>
+  <ion-card  (click)="navigate('PointOfInterestPage')">
+    <img [style.height.px]="cardHeight" src="assets/img/background/points-of-interest.png"/>
+  </ion-card>
+  <ion-card  (click)="navigate('CampusMapPage')">
+    <img [style.height.px]="cardHeight" src="assets/img/background/campus-map.png"/>
+  </ion-card>
+  <!-- <ion-card (click)="comingEvents()">
+    <img src="assets/imgs/book-a-meeting-room@3x.png"/>
+    <div class="card-title">INSIDER NEWS</div>
+  </ion-card> -->
+  <!-- <ion-card (click)="comingEvents()">
+    <img src="assets/imgs/book-a-meeting-room@0,1x.png"/>
+    <div class="card-title">STAFF DIRECTORY</div>
+
+  </ion-card> -->
+
+</ion-content>

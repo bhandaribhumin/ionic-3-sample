@@ -1,0 +1,16 @@
+node_modules
+www
+.idea
+.temp
+.gradle/
+.sass-cache
+<%= appPath %>/bower_components
+coverage
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+.sourcemaps/
+.vscode/

@@ -1,0 +1,53 @@
+<!--
+  Generated template for the FaqPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="background-gradient">
+      <ion-buttons left>
+          <button color="white-color" ion-button menuToggle icon-only>
+            <ion-icon class="menu-font-style" name="ios-menu-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title class="pageTitle">FAQs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding class="background-color">
+  <ion-list class="main-content-style">
+    <div class="">
+      <h1>{{pageHeadingText}}</h1>
+      <h3>{{pageSubHeadingText}}</h3>
+    </div>
+  </ion-list>
+
+  <div >
+    <ion-list>
+      <ion-list-header no-lines no-padding *ngFor="let data of faqDataArray; let i=index" class="accordian-list-header" text-wrap (click)="toggleLevel1('idx'+i,data)" [ngClass]="{active: isLevel1Shown('idx'+i)}">
+        <button ion-item detail-none class="accordion-header">
+      {{data.Question}}
+          <ion-icon color="success" item-right [name]="isLevel1Shown('idx'+i) ? 'ios-remove-circle-outline' : 'ios-add-circle-outline'"></ion-icon>
+        </button>
+        <ion-list *ngIf="isLevel1Shown('idx'+i)" class="content-class">
+          <ion-item class="item-inner-color" text-wrap (click)="toggleLevel2('idx'+i+'idx'+i2)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i)}">
+            <div class="accordion-content">
+          {{data.Answer}}
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-list-header>
+    </ion-list>
+
+  </div>
+</ion-content>
+<ion-footer class="hide-on-keyboard-open" align="center" no-border>
+
+      <div class="footer-style">
+    <a class="footer-link-style" (click)="navigate('ContactUsPage')">Contact Us</a>
+      </div>
+
+
+  </ion-footer>

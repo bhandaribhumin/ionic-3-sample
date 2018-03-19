@@ -1,0 +1,536 @@
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import '../theme/animations';
+@import '../theme/dark.theme';
+@import '../theme/light.theme';
+@import "../theme/icons";
+
+@font-face {
+  font-family: 'MyriadProRegular';
+  font-style: normal;
+  src: local('MyriadProRegular'), local('MyriadProRegular'), url('../assets/MyriadPro-Regular.otf');
+}
+@font-face {
+  font-family: 'MyriadProLight';
+  font-style: normal;
+  src: local('MyriadProLight'), local('MyriadProLight'), url('../assets/MyriadPro-Light.otf');
+}
+// ios scroll
+.platform-ios .input-cover{position: static}
+// .input-cover{position: static}
+//android scroll
+.platform-android .scroll-content { padding-bottom: 0!important; }
+//.scroll-content { padding-bottom: 0!important; }
+.align-center {
+  text-align: center;
+}
+.md button {
+  text-transform: none !important;
+}
+ion-modal {
+  ion-backdrop {
+      visibility: visible;
+      z-index: 0;
+  }
+ .modal-wrapper{
+  box-shadow: none !important;
+}
+}
+.highlight {
+  background-color: #f4f4f4;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+.background-gradient{
+  background:linear-gradient(to top,rgb(0, 50, 101), rgba(0, 80, 141, 0.994)  80%);
+}
+.toolbar-background {
+  background:linear-gradient(to top,rgb(0, 50, 101), rgba(0, 80, 141, 0.994)  80%);
+  color: #ffffff !important;
+}
+ .toolbar-title{
+  color: #fff !important;
+}
+.back-button {
+  color: #fff !important;
+}
+
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top-radius {
+  border-radius: 10% 10% 0 0;
+}
+
+.bottom-radius {
+  border-radius: 0 0 10% 10%;
+}
+
+.round {
+  border-radius: 50%;
+}
+.text-input::-moz-placeholder {
+  color: #898B8B;
+}
+
+.text-input:-ms-input-placeholder {
+  color: #898B8B;
+}
+
+input::-webkit-input-placeholder {
+  color: #ffffff  !important;
+  font-size: 12px;
+  font-family: 'MyriadProLight';
+}
+input:-moz-placeholder {
+  color: #ffffff  !important;
+  font-size: 12px;
+  font-family: 'MyriadProLight';
+}
+input:-ms-input-placeholder { /* IE10+ */
+  color: #ffffff !important;
+  font-size: 12px;
+  font-family: 'MyriadProLight';
+}
+
+
+
+.add-top-padding-50{
+  padding-top: 50px;
+}
+.add-top-padding-20{
+   padding-top: 20px;
+}
+.add-top-padding-30{
+  padding-top: 30px;
+}
+.text-input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: #898B8B;
+}
+.loading-wrapper{
+//  background: transparent !important;
+//  -webkit-box-shadow:none !important;
+//  box-shadow:none !important;
+}
+
+.transparent-header {
+  // This is just to make the header transparent and button/icon with white color
+  .toolbar-content,
+  .back-button {
+    color: white;
+  }
+  .toolbar-background,
+  ion-navbar,
+  ion-header {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  .header-md::after,
+  .toolbar-background-ios {
+    background-image: none;
+    border-bottom: 0;
+  }
+  .header-ios .toolbar-background-ios,
+  .footer-ios .toolbar-background-ios {
+    border: 0;
+  }
+  // ---
+}
+.menu-inner {
+  background:#36424a !important;
+}
+// right side menu
+#menu-right {
+  button {
+    padding-left: 16px;
+  }
+  ion-content {
+    background: rgba(255, 36, 36, 0.82);
+  }
+  .menu-inner {
+    width: 8vh;
+    background:#36424a !important;
+  }
+  @media screen and (orientation: landscape) {
+    .menu-inner {
+      width: 15vh;
+    }
+  }
+  .active-menu-item {
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #ffffff;
+  }
+  .label {
+    display: flex;
+    align-items: center;
+  }
+  .list-md[no-lines] .item-block,
+  .list-md[no-lines] ion-item-options,
+  .list-md[no-lines] .item .item-inner,
+  .list-ios[no-lines] .item-block,
+  .list-ios[no-lines] ion-item-options,
+  .list-ios[no-lines] .item .item-inner {
+    padding: .3rem 0;
+    background: transparent;
+    color: white;
+  }
+  ion-icon {
+    line-height: 1;
+  }
+}
+
+.icon-badge {
+  top: 0px;
+  right: 0px;
+  background: #FF5D5D;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 15px;
+}
+
+// Sidemenu with avatar
+#menu-avatar {
+  .user-avatar {
+    padding: .5em;
+  }
+  h3,
+  .label {
+    color: white;
+    font-weight: bold;
+  }
+  .item {
+    background: transparent;
+  }
+  ion-content {
+    background: linear-gradient(48deg, rgba(157, 72, 173, 0.8) 0%, rgba(157, 72, 173, 0.86) 28%, rgba(0, 168, 168, 0.98) 93%, rgba(0, 168, 168, 1) 100%);
+  }
+  .menu-inner {
+    background: rgba(255, 255, 255, .3);
+  }
+}
+
+//  side menu
+#mainMenu {
+  .toolbar-background {
+    background: rgb(54,66,74) !important;
+    color: #ffffff !important;
+  }
+  .toolbar-content{
+    background: rgb(54,66,74) !important;
+  }
+   .toolbar-title{
+    color: #fff !important;
+  }
+  // ion-content{
+  //  margin-top: 160px;
+  // // margin-bottom: 100px;
+  // }
+  // .content-ios{
+  //   margin-top: 180px;
+  // }
+  // .grid-style{
+  //   margin-bottom: 200px;
+  // }
+
+  .rti-logo{
+    width: 60% !important;
+    text-align: left;
+    padding-top: 3px;
+  }
+}
+#mainMenu .logo-style img{
+  max-width: 120px;
+  width:100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+ }
+
+ #mainMenu .header-style {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: 'MyriadProLight';
+  line-height: 1.4em;
+}
+#mainMenu .sub-header-style {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: 'MyriadProLight';
+}
+#mainMenu .menu-background, .menu-background button {
+  background-color: rgb(54,66,74);
+}
+
+#mainMenu .menu-list{
+//padding: 35px 0px 0px 0px;
+margin: 0px 0px 0px -19px;
+}
+
+#mainMenu .menu-list ion-icon{
+  font-size: 2.2rem;
+  padding:0px 22px 0px 13px;
+}
+
+#mainMenu .menu-list .input-wrapper {
+color : #fff;
+font-weight: 100;
+font-family: 'MyriadProLight';
+border : none;
+}
+
+#mainMenu .badge-style{
+  background-color: rgb(90,142,34);
+  color: #fff;
+  font-weight: 100;
+  font-family: 'MyriadProLight';
+  border-radius: 7px;
+}
+
+#mainMenu .menu-list .item-inner{
+  border-bottom: 1px outset #dedede;
+}
+
+.close-icon-style{
+  position: absolute;
+
+ z-index: auto;
+top:-5px;
+right: 0;
+  color: #fff;
+}
+
+.close-icon-style ion-icon{
+
+  font-size: 3rem;
+  color: #fff;
+}
+
+
+.close-icon-style button{
+//  margin: 10px 0px 0px -20px;
+  box-shadow: none;
+  padding-right: 5px;
+  padding-left: 0px;
+  background-color: transparent;
+}
+.close-icon-style .activated{
+  //  margin: 10px 0px 0px -20px;
+
+    background-color: transparent;
+  }
+  .popover-md .popover-content, .popover-content{
+    top: 0px;
+    left: 0px;
+
+    bottom: 11.3% !important;
+  width: 27%;
+  overflow: hidden;
+  /* top: 65% !important; */
+  height: 27.3% !important;
+  right: 0 !important;
+}
+
+//icons
+
+.nav-icon-style{
+
+  height: auto !important;
+}
+
+.ion-ios-meetingsicon,
+.ion-md-meetingsicon,  {
+  content: url(../assets/icon/my-meetings.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+
+}
+.ion-md-meetingsicon-outline,.ion-ios-meetingsicon-outline  {
+  content: url(../assets/icon/my-meetings-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-meetingroomicon,
+.ion-md-meetingroomicon {
+  content: url(../assets/icon/book-a-meeting-rrom.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-md-meetingroomicon-outline,.ion-ios-meetingroomicon-outline {
+  content: url(../assets/icon/book-a-meeting-room-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-campusmapicon,
+.ion-md-campusmapicon {
+  content: url(../assets/icon/campus-map.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-md-campusmapicon-outline,.ion-ios-campusmapicon-outline {
+  content: url(../assets/icon/campus-map-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-insidernewsicon,
+.ion-md-insidernewsicon {
+  content: url(../assets/icon/insider-news.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-md-insidernewsicon-outline,.ion-ios-insidernewsicon-outline {
+  content: url(../assets/icon/insider-news-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-instantbookingicon,
+.ion-md-instantbookingicon {
+  content: url(../assets/icon/instant-booking.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-md-instantbookingicon-outline,.ion-ios-instantbookingicon-outline  {
+  content: url(../assets/icon/instant-booking-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+
+.ion-ios-pointsofinteresticon,
+.ion-md-pointsofinteresticon {
+  content: url(../assets/icon/points-of-interest.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-md-pointsofinteresticon-outline,.ion-ios-pointsofinteresticon-outline {
+  content: url(../assets/icon/points-of-interest-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-staffdirectoryicon,
+.ion-md-staffdirectoryicon {
+  content: url(../assets/icon/staff-directory.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-md-staffdirectoryicon-outline,.ion-md-staffdirectoryicon-outline {
+  content: url(../assets/icon/staff-directory-white.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+
+.ion-ios-contactusicon,
+.ion-md-contactusicon {
+  content: url(../assets/icon/contact-us.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-faqicon,
+.ion-md-faqicon {
+  content: url(../assets/icon/faq.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-notificationsicon,
+.ion-md-notificationsicon {
+  content: url(../assets/icon/notifications.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-sign-outicon,
+.ion-md-sign-outicon {
+  content: url(../assets/icon/sign-out.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-searchicon,
+.ion-md-searchicon {
+  content: url(../assets/icon/search.svg);
+  width: 50px;
+  height: 55px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-navicon,
+.ion-md-navicon{
+    content: url(../assets/icon/navigate.svg);
+    width: 50px;
+    height: 55px;
+    padding: 6px 4px 2px;
+    opacity: 0.9;
+  }
+
+//page title font
+.pageTitle {
+  font-family: "MyriadProLight";
+  font-weight: 400;
+}
+.sideMenu-style .item-md.activated,.sideMenu-style .item-ios.activated{
+  background-color: #36424a !important;
+}

@@ -1,0 +1,89 @@
+page-faq {
+   
+   h1{
+    font-family: 'MyriadProLight';
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+h3{
+    font-family: 'MyriadProRegular';
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+            .nomargin {
+                margin: 0 !important;
+            }
+        
+            .accordion-header {
+                color:black;
+                background-color:#DDDDDD;
+                font-family: 'MyriadProLight';
+                border: 1px solid #C6C7C7;
+           
+                .item-inner {
+                    margin-left: 0 !important;
+                }
+        
+                ion-icon {
+                    transition: all .25s ease-in;
+                   // transform: rotate(0);
+                }
+                .input-wrapper ion-label{
+                    font-size: 16px;
+                }
+            }      
+            .active ion-icon {
+               // transform: rotate(90deg);
+            }           
+            .accordion-content {
+              
+                transition: 0.3s ease-in-out;
+                font-family: 'MyriadProLight';
+                &.active {
+                    padding: .20rem;
+                }
+            }
+            
+            ion-list{
+                margin: 0px !important;
+            }
+            .label {
+                margin: 0px;
+            }
+            ion-list-header{
+               // padding: 0px !important;
+               margin-bottom: 1px !important;
+            }
+            .item-inner-color{
+                background-color: #E4E4E4 !important;
+            }
+
+            .background-color{
+                background-color: rgb(240,240,240) !important;
+                -webkit-box-shadow: none !important;
+                -moz-box-shadow: none !important; 
+                box-shadow: none !important;
+            }
+
+            .content-class{
+                border:1px solid #D8D8D8 !important;
+            }
+          .main-content-style{
+              padding: 5%;
+          }
+          .footer-style{
+            color:gray;
+            font-size: 12px;
+            font-family: 'MyriadProLight';
+            margin-bottom: 10px;
+          }
+          .footer-link-style{
+            font-weight: 100;
+            color:black;
+            font-family: 'MyriadProLight';
+            border-bottom: 1px solid black;
+          }
+         
+        
+}

@@ -1,0 +1,59 @@
+page-contact-us {
+    h1{
+        font-family: 'MyriadProLight';
+        font-weight: 500;
+        font-size: 3rem;
+    }
+    
+    h4{
+        font-family: 'MyriadProRegular';
+        font-weight: 400;
+        font-size: 1.8rem;
+    }
+    
+    [icon-left] ion-icon, [icon-start] ion-icon {
+        padding-right: 0.8em;
+        font-size: 1.8em;
+        color: rgb(33,104,161);
+    }
+    
+    .contact-us-main-div{
+        line-height: 3em;
+    }
+    
+    .contact-content-color, .contact-content-color button {
+        background-color: rgb(240,240,240) !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important; 
+        box-shadow: none !important;
+        margin: 0px 5px 0px 0px;
+        padding: 15px 5px 0px 5px;
+        text-transform: none;
+        font-family: sans-serif;
+        font-weight: 500;
+       
+       }
+       .contact-content-color .contact-us-main-div{
+         padding: 5%;
+       }
+
+         
+   .footer-style{
+    color:gray;
+    font-size: 12px;
+    font-family: 'MyriadProLight';
+    margin-bottom: 10px;
+  }
+  .footer-link-style{
+    font-weight: 100;
+    color:black;
+    font-family: 'MyriadProLight';
+    border-bottom: 1px solid black;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+}
+  
+}

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "12333434",
+    "firebase_url": "https://my-project-xxxxx.firebaseio.com",
+    "project_id": "my-project-xxx",
+    "storage_bucket": "my-project-1212312.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12121221:android:1212121212",
+        "android_client_info": {
+          "package_name": "org.rti.campus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121212-ssdffsdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIxxxx_cvhvjhsdfP6k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

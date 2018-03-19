@@ -1,0 +1,45 @@
+<div class="{{global.state['theme']}}">
+  <ion-menu [content]="content" id="mainMenu" type="overlay" class="sideMenu-style">
+    <ion-header>
+      <ion-toolbar>
+        <ion-grid>
+          <ion-row text-center>
+
+            <ion-col col-4>
+              <div  text-left class="header-style">
+                <img class="rti-logo" src="assets/img/logo/logo-rti.png">
+              </div>
+
+            </ion-col>
+            <ion-col col-7>
+              <div text-left class="header-style">
+                {{profileDisplayName}}
+              </div>
+              <!-- <div style="display:none;" class="sub-header-style" no-margin>
+                {{profileEmail}}</div> -->
+            </ion-col>
+            <ion-col col-1>
+                <div class="close-icon-style">
+                    <button ion-button menuClose>
+                      <ion-icon name="ios-close"></ion-icon>
+                    </button>
+                  </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content overflow-scroll="false" class="menu-background">
+      <ion-grid class="grid-style">
+        <ion-list class="menu-list">
+          <button icon-start ion-item menuClose="left" detail-none *ngFor="let p of pages" (click)="openPage(p)">
+            <ion-icon class="nav-icon-style" [name]="p.icon"></ion-icon>
+            {{p.title}}
+            <ion-badge *ngIf="p.isBadge" item-end class="badge-style">{{badgeCount}}</ion-badge>
+          </button>
+        </ion-list>
+      </ion-grid>
+    </ion-content>
+  </ion-menu>
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+</div>

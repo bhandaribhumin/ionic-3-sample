@@ -1,0 +1,92 @@
+page-home {
+    ion-card {
+        position: relative;
+        text-align: center;
+
+      }
+
+      .card-md,.card-ios  {
+
+        border-radius: 8px;
+        background: none  !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none  !important;
+       margin : 0;
+width:100%
+      }
+
+      .card-title {
+        position: absolute;
+        // top: 36%;
+        font-size: 1.5em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'MyriadProLight';
+      }
+
+      .card-background-page{
+        background:linear-gradient(to top,rgba(0, 80, 141, 0.994) ,rgb(0, 50, 101) 80%) !important;
+      }
+    //new styles
+
+    .badge-style{
+        background-color: rgb(90,142,34);
+        color: #fff;
+        font-weight: 100;
+        font-family: 'MyriadProLight';
+        border-radius: 7px;
+        margin-left: -11px  !important;
+    margin-top: -9px  !important;
+      }
+
+    .heading-background{
+        background:linear-gradient(to top,rgb(0, 50, 101), rgba(0, 80, 141, 0.994) 80%) !important ;
+        height: 2em;
+        }
+        .toolbar-md ion-title,.toolbar-ios ion-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px 90px 1px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size:1.2em;
+            margin-left: 45px;
+        padding-left: 0px;
+        font-weight:400;
+          }
+
+          .toolbar-title{
+            font-weight: 200;
+            font-size: 16px;
+        }
+
+        .toolbar{
+            padding-top:30px;
+            min-height: 50px;
+        }
+
+        .menu-font-style{
+            font-size: 3.3rem !important;
+            margin-top: 3px;
+        }
+       .scroll-content{
+        margin-top: 60px;
+       }
+
+        .toolbar-background-ios{
+        border-width: 0 !important;
+       }
+       .header-md::after{
+        background-image: none;
+       }
+
+       .bar-button-menutoggle-md,.bar-button-menutoggle-ios {
+        display: block !important;
+        color:#fff  !important;
+       }
+
+
+}

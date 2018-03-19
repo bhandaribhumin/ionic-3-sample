@@ -1,0 +1,49 @@
+<ion-content class="background-gradient">
+    <ion-grid>
+      <ion-row text-center>
+        <ion-col col-12 class="logo-style">
+          <img src="assets/img/logo/logo-rti.png" />
+        </ion-col>
+      </ion-row>
+      <ion-row text-center>
+        <ion-col col-12>
+          <div class="header-style">Welcome</div>
+          <div class="sub-header-style" no-margin>Please login with your RTI credentials</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 text-center class="set-form-padding">
+          <form #requestLoginFrm="ngForm" (ngSubmit)="submitRequestLoginFrm(requestLoginFrm)" novalidate>
+            <ion-item>
+              <ion-input class="text-input " tabIndex="1" placeholder="RTI email address" type="email" name="username" #username="ngModel" ngModel
+                required uniqueName></ion-input>
+            </ion-item>
+            <show-errors [control]="username"></show-errors>
+            <!-- <ion-item>
+              <ion-input class="text-input" tabIndex="2" placeholder="Password" [type]="isType" name="password" #password="ngModel" ngModel
+                required uniqueName></ion-input>
+              <button ion-button clear class="cust-icon-eye" color="dark" type="button" item-right (click)="managePassword()">
+                <ion-icon [name]="isiconEye"> </ion-icon>
+              </button>
+            </ion-item> -->
+            <!-- <show-errors [control]="password"></show-errors> -->
+            <div class="add-top-padding-50">
+              <button type="submit" [disabled]="requestLoginFrm.invalid || requestLoginFrm.pending" ion-button color="border">
+                LOG IN
+              </button>
+            </div>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  <ion-footer class="hide-on-keyboard-open" align="center" no-border>
+    <ion-toolbar>
+      <div class="footer-style">
+        Issues with login?
+        <a class="footer-link-style" (click)="navigate('ContactUsPage')">Contact Us</a> &nbsp;&nbsp;
+        <a class="footer-link-style" (click)="navigate('FaqPage')">FAQs</a>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+  

@@ -1,0 +1,41 @@
+accordion-list {
+
+    .nomargin {
+        margin: 0 !important;
+    }
+
+    .accordion-header {
+        color: white;
+        //transition: 0.3s ease-in-out;
+        &.active {
+           // margin-top: 50px;
+        }
+        .item-inner {
+            margin-left: 0 !important;
+        }
+
+        ion-icon {
+           // transition: all .25s ease-in;
+          //  transform: rotate(0);
+        }
+       
+    }
+
+    ion-list-header .active ion-icon {
+       // transform: rotate(90deg);
+    }
+    .accordion-content {
+        transition: 0.3s ease-in-out;
+        &.active {
+            padding: .75rem;
+           // transition: 1s ease-in-out;
+        }
+    }
+    ion-list{
+        margin: 1px !important;
+        z-index: 999;
+    }
+    .label {
+        margin: 0px;
+    }
+}
